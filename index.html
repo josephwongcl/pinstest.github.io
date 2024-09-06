@@ -17,7 +17,11 @@
     <script src="index.js"></script>
     <script type="text/javascript">
         function showAndroidToast(toast) {
-            AmazonShopExternalInterfaceHandler.showToast(toast);
+            AmazonShopExternalInterfaceHandler.onMessageReceived(JSON.stringify({
+          messageCode: 'CLOSE_VIEW',
+          messageDetails: 'testing testing 123',
+          url: 'https://www.target.com/',
+        }));
         }
     </script>
   </body>
