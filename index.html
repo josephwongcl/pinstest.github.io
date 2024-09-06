@@ -13,8 +13,8 @@
         <h1>Pinterest Target test page v2</h1>
       
         <div class="block-display">
-          <input type="button" value="Say hello" onClick="sendCloseView()" />
-          <input type="button" value="Say hello" onClick="sendOpenExternalLink()" />
+          <input type="button" value="CLOSE_VIEW" onClick="sendCloseView()" />
+          <input type="button" value="OPEN_EXTERNAL_LINK" onClick="sendOpenExternalLink()" />
         </div>
 
     </main>
@@ -29,7 +29,7 @@
         }
         function sendOpenExternalLink() {
             AmazonShopExternalInterfaceHandler.postMessage(JSON.stringify({
-              messageCode: 'sendOpenExternalLink',
+              messageCode: 'OPEN_EXTERNAL_LINK',
               messageDetails: 'testing testing 123',
               url: 'https://www.target.com/',
             }));
