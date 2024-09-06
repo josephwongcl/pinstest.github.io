@@ -10,7 +10,7 @@
   </head>
   <body>
     <main>
-        <h1>Pinterest Target test page v2</h1>
+        <h1>Pinterest Target test page v3</h1>
       
         <div class="block-display">
           <input type="button" value="CLOSE_VIEW" onClick="sendCloseView()" />
@@ -21,14 +21,14 @@
     <script src="index.js"></script>
     <script type="text/javascript">
         function sendCloseView() {
-            AmazonShopExternalInterfaceHandler.postMessage(JSON.stringify({
+            TargetAccountLinkingInterfaceHandler.postMessage(JSON.stringify({
               messageCode: 'CLOSE_VIEW',
               messageDetails: 'testing testing 123',
               url: 'https://www.target.com/',
             }));
         }
         function sendOpenExternalLink() {
-            AmazonShopExternalInterfaceHandler.postMessage(JSON.stringify({
+            TargetAccountLinkingInterfaceHandler.postMessage(JSON.stringify({
               messageCode: 'OPEN_EXTERNAL_LINK',
               messageDetails: 'testing testing 123',
               url: 'https://www.target.com/',
