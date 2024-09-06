@@ -10,18 +10,18 @@
   </head>
   <body>
     <main>
-        <h1>Welcome to My Website 5</h1>  
+        <h1>Welcome to My Website 6</h1>  
         <input type="button" value="Say hello" onClick="onMessageReceived('Hello Android!')" />
 
     </main>
     <script src="index.js"></script>
     <script type="text/javascript">
-        function showAndroidToast(toast) {
+        function onMessageReceived() {
             AmazonShopExternalInterfaceHandler.onMessageReceived(JSON.stringify({
-          messageCode: 'CLOSE_VIEW',
-          messageDetails: 'testing testing 123',
-          url: 'https://www.target.com/',
-        }));
+              messageCode: 'CLOSE_VIEW',
+              messageDetails: 'testing testing 123',
+              url: 'https://www.target.com/',
+            }));
         }
     </script>
   </body>
