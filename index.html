@@ -10,11 +10,12 @@
   </head>
   <body>
     <main>
-        <h1>Pinterest Target test page v3</h1>
+        <h1>Pinterest Target test page v4</h1>
       
         <div class="block-display">
-          <input type="button" value="CLOSE_VIEW" onClick="sendCloseView()" />
+          <input type="button" value="CLOSE_VIEW (TargetAccountLinkingInterfaceHandler.postMessage)" onClick="sendCloseView()" />
           <input type="button" value="OPEN_EXTERNAL_LINK" onClick="sendOpenExternalLink()" />
+          <input type="button" value="CLOSE_VIEW (window.webkit.messageHandlers.TargetAccountLinkingInterfaceHandler.postMessage)" onClick="sendCloseViewIOS()" />
         </div>
 
     </main>
@@ -30,6 +31,13 @@
         function sendOpenExternalLink() {
             TargetAccountLinkingInterfaceHandler.postMessage(JSON.stringify({
               messageCode: 'OPEN_EXTERNAL_LINK',
+              messageDetails: 'testing testing 123',
+              url: 'https://www.target.com/',
+            }));
+        }
+        function sendCloseViewIOS() {
+            window.webkit.messageHandlers.TargetAccountLinkingInterfaceHandler.postMessage(JSON.stringify({
+              messageCode: 'CLOSE_VIEW',
               messageDetails: 'testing testing 123',
               url: 'https://www.target.com/',
             }));
